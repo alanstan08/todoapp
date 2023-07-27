@@ -1,0 +1,45 @@
+<%- include("partials/header.ejs") %>
+<div class="container " id="content">
+  <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center" style="height:700px ">
+    <div class="list-group">
+      <h3 class="headingwork">Work Tasks</h3>
+        <% for (var i = 0; i < worktasks.length; i++) { %>
+          <label class="list-group-item d-flex gap-3">
+            <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
+            <span class="pt-1 form-checked-content">
+              <strong><%= worktasks[i] %></strong>
+            </span>
+          </label>
+        <% } %>
+      
+      
+     
+       
+    </div>
+
+    <div class="list-group">
+      <h3 class="headingnormal">Other Tasks</h3>
+      <% for (var i = 0; i < othertasks.length; i++) { %>
+        <label class="list-group-item d-flex gap-3">
+          <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
+          <span class="pt-1 form-checked-content">
+            <strong><%= othertasks[i] %></strong>
+          </span>
+        </label>
+      <% } %>
+    
+    
+    
+     
+    </div>
+    <form action="/addtask">
+      <small class="d-block text-body-secondary">           
+        <button class="btn btn-primary" type="submit" >
+            <span contenteditable="true" class="w-100">Add new task...</span>
+        </button>
+      </small>
+    </form>
+</div>
+</div>
+
+<%- include("partials/footer.ejs") %>

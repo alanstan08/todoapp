@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+<form action="/addtask" method="post">
+    
+    <h1 class="h3 mb-3 fw-normal">Add new Task</h1>
+
+    <div class="form-floating">
+      <input type="text" name="tasktype" class="form-control" id="floatingInput" >
+      <label for="floatingInput">Task Type </label>
+      <input type="text" name="task" class="form-control" id="floatingInput" >
+      <label for="floatingInput">Task</label>
+    </div>
+    
+    
+    <button class="btn btn-primary w-100 py-2" type="submit" >Sign in</button>
+   
+  </form>
+<%- include("partials/footer.ejs") %>
